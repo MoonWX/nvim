@@ -1,4 +1,10 @@
 return {
+  -- Bread Crumb Context
+  "SmiteshP/nvim-navic",
+  dependencies = "neovim/nvim-lspconfig",
+
+  "nvim-treesitter/nvim-treesitter-context",
+
   -- Theme
   {
     'folke/tokyonight.nvim',

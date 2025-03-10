@@ -617,7 +617,6 @@ return {
           -- But for many setups, the LSP (`ts_ls`) will work just fine
           -- ts_ls = {},
           --
-  
           lua_ls = {
             -- cmd = { ... },
             -- filetypes = { ... },
@@ -632,6 +631,55 @@ return {
               },
             },
           },
+
+          -- Python
+          pyright = {
+            settings = {
+              python = {
+                analysis = {
+                  typeCheckingMode = "basic",  -- Type check mode: basic/strict
+                  autoSearchPaths = true,
+                  useLibraryCodeForTypes = true,
+                },
+              },
+            },
+          },
+
+          -- JavaScript/TypeScript
+          ts_ls = {},
+
+          -- C/C++
+          clangd = {
+            cmd = { "clangd", "--background-index", "--clang-tidy" },  -- Enable backstage index & Clang-Tidy
+          },
+
+          -- Go
+          gopls = {
+            settings = {
+              gopls = {
+                analyses = { unusedparams = true },
+                staticcheck = true,
+              },
+            },
+          },
+
+          -- Rust
+          rust_analyzer = {
+            settings = {
+              ["rust-analyzer"] = {
+                checkOnSave = { command = "clippy" },  -- Run Clippy when saving
+              },
+            },
+          },
+
+          jsonls = {},        -- JSON
+          yamlls = {},        -- YAML
+          html = {},          -- HTML
+          cssls = {},         -- CSS
+          bashls = {},        -- Bash
+          sqlls = {},         -- SQL
+          jdtls = {},         -- Java
+          kotlin_language_server = {}, -- Kotlin
         }
   
         -- Ensure the servers and tools above are installed
