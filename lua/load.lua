@@ -28,9 +28,10 @@ require'bufferline'.setup {
                 separator = true
             }
         },
-        pick = {
-            alphabet = "abcdefghijklmopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ1234567890",
-        },
+        --pick = {
+        --    alphabet = "abcdefghijklmopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ1234567890",
+        --},
+        numbers = "none",
     }
 }
 
